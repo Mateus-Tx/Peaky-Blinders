@@ -1,0 +1,324 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    overflow-x: hidden;
+    flex-direction: column;
+    background-color: #000;
+}
+
+.capa {
+    margin-left: 35%;
+    width: 65%;
+    height: 100vh;
+}
+
+.logo {
+    position: absolute;
+    top: 150px;
+    margin-left: 70px;
+    width: 330px;
+    height: 170px;
+    padding: 5px;
+}
+
+.conteudo-capa {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 350px;
+    left: 70px;
+    gap: 1rem;
+    color: #fff;
+}
+
+
+.conteudo-capa .titulo-serie {
+    font-size: 27px;
+}
+
+.conteudo-capa span {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 18px;
+    /* padding: 5px; */
+    color: #8f8888;
+    /* border: 1px solid white; */
+}
+
+.conteudo-capa .indicativa {
+    padding: 0px 8px;
+    border: 2px solid #8f8888;
+    border-color: #8f8888;
+}
+
+.conteudo-capa .descricao {
+    display: flex;
+    width: 500px;
+    font-size: 18px;
+}
+
+.serie {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/img/peaky-blinders-fundo-2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.selecao-temporadas {
+    position: absolute;
+    color: #fff;
+    background-color: #4369b58b;
+    top: 30px;
+    left: 100px;
+    border-radius: 20px;
+}
+
+.selecao-temporadas .escolha {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    font-size: 35px;
+    display: flex;
+}
+
+.temporadas {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.botao {
+    list-style: none;
+    display: flex;
+    font-size: 35px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #fff;
+    cursor: pointer;
+}
+
+/* Classes para JS  */
+.botao.selecionado {
+    transform: scale(1.3);
+    transition: 0.5s ease-out;
+}
+
+.selecao-episodios {
+    position: absolute;
+    width: 970px;
+    height: 300px;
+    bottom: 40px;
+    left: 100px;
+    padding: 5px;
+    display: flex;
+    gap: 2rem;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+.container.selecionado {
+    display: flex;
+}
+
+.container {
+    display: none;
+    position: absolute;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 5px;
+    top: 50px;
+    left: -2000px;
+    animation: surgir 3s forwards;
+}
+
+@keyframes surgir{
+    from{
+        left: -2000px;
+    }
+
+    to{
+        left: 0px;
+    }
+
+    
+}
+
+
+.ep {
+    width: 300px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+}
+
+.ep span {
+    display: flex;
+    padding: 2px;
+    width: 100%;
+    margin-top: 170px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #434343;
+}
+
+.ep:nth-child(1) {
+    background-image: url(/img/episodios/T1-EP1.jpg);
+}
+
+.ep:nth-child(2) {
+    background-image: url(/img/episodios/T1-EP2.jpg);
+}
+
+.ep:nth-child(3) {
+    background-image: url(/img/episodios/T1-EP3.jpg);
+}
+
+.ep:nth-child(4) {
+    background-image: url(/img/episodios/T1-EP4.jpg);
+}
+
+.ep:nth-child(5) {
+    background-image: url(/img/episodios/T1-EP5.jpg);
+}
+
+.ep:nth-child(6) {
+    background-image: url(/img/episodios/T1-EP6.jpg);
+}
+
+.container:nth-child(2) .ep:nth-child(1) {
+    background-image: url(/img/episodios/T2-EP1.jpg);
+}
+
+.container:nth-child(2) .ep:nth-child(2) {
+    background-image: url(/img/episodios/T2-EP2.jpg);
+}
+
+.container:nth-child(2) .ep:nth-child(3) {
+    background-image: url(/img/episodios/T2-EP3.jpg);
+}
+
+.container:nth-child(2) .ep:nth-child(4) {
+    background-image: url(/img/episodios/T2-EP4.jpg);
+}
+
+.container:nth-child(2) .ep:nth-child(5) {
+    background-image: url(/img/episodios/T2-EP5.jpg);
+}
+
+.container:nth-child(2) .ep:nth-child(6) {
+    background-image: url(/img/episodios/T2-EP6.jpg);
+}
+
+.container:nth-child(3) .ep:nth-child(1) {
+    background-image: url(/img/episodios/T3-EP1.jpg);
+}
+
+.container:nth-child(3) .ep:nth-child(2) {
+    background-image: url(/img/episodios/T3-EP2.jpg);
+}
+
+.container:nth-child(3) .ep:nth-child(3) {
+    background-image: url(/img/episodios/T3-EP3.jpg);
+}
+
+.container:nth-child(3) .ep:nth-child(4) {
+    background-image: url(/img/episodios/T3-EP4.jpg);
+}
+
+.container:nth-child(3) .ep:nth-child(5) {
+    background-image: url(/img/episodios/T3-EP5.jpg);
+}
+
+.container:nth-child(3) .ep:nth-child(6) {
+    background-image: url(/img/episodios/T3-EP6.jpg);
+}
+
+.container:nth-child(4) .ep:nth-child(1) {
+    background-image: url(/img/episodios/T4-EP1.jpg);
+}
+
+.container:nth-child(4) .ep:nth-child(2) {
+    background-image: url(/img/episodios/T4-EP2.jpg);
+}
+
+.container:nth-child(4) .ep:nth-child(3) {
+    background-image: url(/img/episodios/T4-EP3.jpg);
+}
+
+.container:nth-child(4) .ep:nth-child(4) {
+    background-image: url(/img/episodios/T4-EP4.jpg);
+}
+
+.container:nth-child(4) .ep:nth-child(5) {
+    background-image: url(/img/episodios/T4-EP5.jpg);
+}
+
+.container:nth-child(4) .ep:nth-child(6) {
+    background-image: url(/img/episodios/T4-EP6.jpg);
+}
+
+.container:nth-child(5) .ep:nth-child(1) {
+    background-image: url(/img/episodios/T5-EP1.jpg);
+}
+
+.container:nth-child(5) .ep:nth-child(2) {
+    background-image: url(/img/episodios/T5-EP2.jpg);
+}
+
+.container:nth-child(5) .ep:nth-child(3) {
+    background-image: url(/img/episodios/T5-EP3.jpg);
+}
+
+.container:nth-child(5) .ep:nth-child(4) {
+    background-image: url(/img/episodios/T5-EP4.jpg);
+}
+
+.container:nth-child(5) .ep:nth-child(5) {
+    background-image: url(/img/episodios/T5-EP5.jpg);
+}
+
+.container:nth-child(5) .ep:nth-child(6) {
+    background-image: url(/img/episodios/T5-EP6.jpg);
+}
+
+.container:nth-child(6) .ep:nth-child(1) {
+    background-image: url(/img/episodios/T6-EP1.jpg);
+}
+
+.container:nth-child(6) .ep:nth-child(2) {
+    background-image: url(/img/episodios/T6-EP2.jpg);
+}
+
+.container:nth-child(6) .ep:nth-child(3) {
+    background-image: url(/img/episodios/T6-EP3.jpg);
+}
+
+.container:nth-child(6) .ep:nth-child(4) {
+    background-image: url(/img/episodios/T6-EP4.jpg);
+}
+
+.container:nth-child(6) .ep:nth-child(5) {
+    background-image: url(/img/episodios/T6-EP5.jpg);
+}
+
+.container:nth-child(6) .ep:nth-child(6) {
+    background-image: url(/img/episodios/T6-EP6.jpg);
+}
